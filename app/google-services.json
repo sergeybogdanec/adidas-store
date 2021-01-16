@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "597455140294",
+    "project_id": "adidasstore-581db",
+    "storage_bucket": "adidasstore-581db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597455140294:android:68a3668b37c7d68adc6ec7",
+        "android_client_info": {
+          "package_name": "com.sergeybogdanec.adidasstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597455140294-svc6ea64nbg4hleavlmvbmg0f0n64fg9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZbW-LA9SR664DrX0zazMMGjnC6wLh_6M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597455140294-svc6ea64nbg4hleavlmvbmg0f0n64fg9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
