@@ -1,2 +1,3 @@
+include ':artemapp'
 include ':app'
 rootProject.name = "Adidas Store"

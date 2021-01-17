@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Adidas Store</string>
+    <string name="signIn">Вход</string>
+    <string name="registration">Регистрация</string>
+    <string name="email">Эл. почта</string>
+    <string name="password">Пароль</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="name">Имя</string>
+    <string name="validation_error">Не все поля заполнены правильно!</string>
+    <string name="unknown_error">Unknown error</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

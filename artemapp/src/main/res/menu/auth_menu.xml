@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/signIn"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:id="@+id/authFragment"/>
+
+    <item android:title="@string/registration"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:id="@+id/registrationFragment"/>
+
+</menu>
