@@ -15,17 +15,18 @@
             android:id="@+id/vToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="16dp"
             app:title="orders" >
             <LinearLayout
                 android:gravity="end"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/vAddOrders"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@android:drawable/ic_menu_add"/>
+                    android:src="@android:drawable/ic_menu_edit"/>
 
             </LinearLayout>
         </com.google.android.material.appbar.MaterialToolbar>
