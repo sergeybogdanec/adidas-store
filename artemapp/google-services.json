@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "105650205482",
+    "project_id": "bdlaba-dea0e",
+    "storage_bucket": "bdlaba-dea0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105650205482:android:ae5365e6e95dc21eab2453",
+        "android_client_info": {
+          "package_name": "by.tix.draft.artemapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105650205482-gi6ms3a12motd79oodmab4vbq3b3q96e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeecdNOkKXrz0nIjSBTO7L1u_mm37iYDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105650205482-gi6ms3a12motd79oodmab4vbq3b3q96e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,4 +10,9 @@
         android:id="@+id/productFragment"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Products" />
+
+    <item
+        android:id="@+id/clientsFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Clients" />
 </menu>
