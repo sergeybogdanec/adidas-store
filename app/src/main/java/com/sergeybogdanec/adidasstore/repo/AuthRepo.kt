@@ -13,10 +13,6 @@ object AuthRepo {
         Firebase.auth
     }
 
-    private val store by lazy {
-        Firebase.firestore
-    }
-
     fun register(
         name: String,
         email: String,

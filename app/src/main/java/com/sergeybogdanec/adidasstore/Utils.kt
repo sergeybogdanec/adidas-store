@@ -4,8 +4,13 @@ import android.app.Application
 import android.view.View
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
+import androidx.databinding.BindingAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.AndroidViewModel
+import androidx.recyclerview.widget.RecyclerView
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.GroupieViewHolder
+import com.xwray.groupie.Item
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
@@ -32,3 +37,10 @@ inline fun <T> Flow<T>.collectIn(
     this@collectIn.collect(action)
 }
 
+@BindingAdapter("app:items")
+fun setAdapterItems(view: RecyclerView, items: List<Item<*>>?) {
+    val adapter: GroupAdapter<*> = (view.adapter?.takeIf { it is GroupAdapter } ?: run {
+        GroupAdapter<GroupieViewHolder>().also(view::setAdapter)
+    }) as GroupAdapter<*>
+    adapter.update(items.orEmpty())
+}

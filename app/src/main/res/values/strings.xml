@@ -8,4 +8,9 @@
     <string name="name">Имя</string>
     <string name="validation_error">Не все поля заполнены правильно!</string>
     <string name="unknown_error">Unknown error</string>
+    <string name="size_placeholder">Размер: %d</string>
+    <string name="price_placeholder">Цена: $%d</string>
+    <string name="products">Товары</string>
+    <string name="cart">Корзина</string>
+    <string name="profile">Профиль</string>
 </resources>
