@@ -14,6 +14,7 @@ data class ProductItem(
     val size: Int,
     val price: Int,
     val pictureLink: String,
+    val type: Int,
     val onButtonClick: () -> Unit
 ): BindableItem<ItemProductBinding>() {
 

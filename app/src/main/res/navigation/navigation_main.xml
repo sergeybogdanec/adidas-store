@@ -4,11 +4,8 @@
     app:startDestination="@id/productsFragment">
 
     <fragment
-        android:id="@+id/productFragment"
-        android:name="com.sergeybogdanec.adidasstore.ui.fragment.product.ProductFragment"
-        android:label="ProductFragment" />
-    <fragment
         android:id="@+id/productsFragment"
         android:name="com.sergeybogdanec.adidasstore.ui.fragment.products.ProductsFragment"
         android:label="ProductsFragment" />
+
 </navigation>

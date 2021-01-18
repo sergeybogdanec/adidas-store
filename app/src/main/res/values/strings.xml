@@ -13,4 +13,9 @@
     <string name="products">Товары</string>
     <string name="cart">Корзина</string>
     <string name="profile">Профиль</string>
+    <string name="all">Все</string>
+    <string name="shoes">Обувь</string>
+    <string name="jackets">Куртки</string>
+    <string name="hoodie">Худи</string>
+    <string name="shirts">Майки</string>
 </resources>

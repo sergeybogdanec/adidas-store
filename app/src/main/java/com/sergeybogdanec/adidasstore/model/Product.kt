@@ -9,6 +9,7 @@ data class Product(
     var collection: String = "",
     var price: Int = 0,
     val pictureUrl: String = "",
+    val type: Int = 0
 ) {
     var id: String = UUID.randomUUID().toString()
 }

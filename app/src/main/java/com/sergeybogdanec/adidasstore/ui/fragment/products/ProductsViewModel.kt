@@ -15,28 +15,37 @@ class ProductsViewModel : ViewModel() {
     private val _items: MutableLiveData<List<ProductItem>> = MutableLiveData()
     val items: LiveData<List<ProductItem>> = _items
 
+    private var baseItems: List<ProductItem> = listOf()
+
     val errorEvent = MutableSharedFlow<String>()
 
     init {
         viewModelScope.launch() {
             try {
-                _items.postValue(
-                    ProductsRepo.getAllProducts().map { product ->
-                        ProductItem(
-                            product.name,
-                            product.description,
-                            product.collection,
-                            product.size,
-                            product.price,
-                            product.pictureUrl
-                        ) {
+                baseItems = ProductsRepo.getAllProducts().map { product ->
+                    ProductItem(
+                        product.name,
+                        product.description,
+                        product.collection,
+                        product.size,
+                        product.price,
+                        product.pictureUrl,
+                        product.type
+                    ) {
 
-                        }
                     }
-                )
+                }.also(_items::postValue)
             } catch (e: Throwable) {
                 errorEvent.emit(e.message ?: "Неизвестная ошибка!")
             }
+        }
+    }
+
+    fun filter(tabIndex: Int) {
+        if (tabIndex == 0) {
+            _items.postValue(baseItems)
+        } else {
+            _items.postValue(baseItems.filter { it.type == tabIndex - 1 })
         }
     }
 
