@@ -4,11 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.sergeybogdanec.adidasstore.repo.CartRepo
 import com.sergeybogdanec.adidasstore.repo.ProductsRepo
 import com.sergeybogdanec.adidasstore.ui.item.ProductItem
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.launch
+import java.lang.Exception
 
 class ProductsViewModel : ViewModel() {
 
@@ -32,7 +34,14 @@ class ProductsViewModel : ViewModel() {
                         product.pictureUrl,
                         product.type
                     ) {
-
+                        viewModelScope.launch {
+                            try {
+                                CartRepo.addToCart(product)
+                                errorEvent.emit("Товар добавлен в корзину!")
+                            } catch (e: Exception) {
+                                errorEvent.emit(e.message ?: "Неизвестная ошибка")
+                            }
+                        }
                     }
                 }.also(_items::postValue)
             } catch (e: Throwable) {

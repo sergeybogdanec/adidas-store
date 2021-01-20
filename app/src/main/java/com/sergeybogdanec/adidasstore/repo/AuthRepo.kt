@@ -7,8 +7,6 @@ import com.google.firebase.ktx.Firebase
 
 object AuthRepo {
 
-    private const val COLLECTION_USERS = "users"
-
     private val auth by lazy {
         Firebase.auth
     }

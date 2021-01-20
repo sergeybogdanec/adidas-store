@@ -18,4 +18,9 @@
     <string name="jackets">Куртки</string>
     <string name="hoodie">Худи</string>
     <string name="shirts">Майки</string>
+    <string name="clear_cart">Очистить корзину</string>
+    <string name="common_price">Общая стоимость: $%d</string>
+    <string name="apply">Применить</string>
+    <string name="createOrder">Оформить заказ</string>
+    <string name="promocode">Промокод</string>
 </resources>
