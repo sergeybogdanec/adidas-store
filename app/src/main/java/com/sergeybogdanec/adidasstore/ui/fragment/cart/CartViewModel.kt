@@ -1,13 +1,18 @@
 package com.sergeybogdanec.adidasstore.ui.fragment.cart
 
 import androidx.lifecycle.*
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.sergeybogdanec.adidasstore.model.CartItem
+import com.sergeybogdanec.adidasstore.model.Order
+import com.sergeybogdanec.adidasstore.model.Product
 import com.sergeybogdanec.adidasstore.repo.CartRepo
 import com.sergeybogdanec.adidasstore.repo.CouponRepo
+import com.sergeybogdanec.adidasstore.repo.OrderRepo
 import com.sergeybogdanec.adidasstore.ui.item.CartItemItem
 import kotlinx.coroutines.launch
 
-class CartViewModel: ViewModel() {
+class CartViewModel : ViewModel() {
 
     private val _items = MutableLiveData<List<CartItemItem>>()
     val items: LiveData<List<CartItemItem>> = _items
@@ -71,6 +76,33 @@ class CartViewModel: ViewModel() {
                 CouponRepo.getCoupon(couponValue)
             }?.let { coupon ->
                 discount.value = coupon.discount
+            }
+        }
+    }
+
+    fun createOrder() {
+        viewModelScope.launch {
+            val items = _items.value
+            if (!items.isNullOrEmpty()) {
+                OrderRepo.addOrder(
+                    Order(
+                        clientId = Firebase.auth.currentUser?.uid ?: "",
+                        products = items.map { cartItem ->
+                            CartItem(
+                                cartItem.name,
+                                cartItem.description,
+                                cartItem.size,
+                                cartItem.collection,
+                                cartItem.price,
+                                cartItem.pictureLink,
+                                cartItem.type,
+                                cartItem.count
+                            )
+                        },
+                        discount = discount.value ?: 0
+                    )
+                )
+                clearCart()
             }
         }
     }

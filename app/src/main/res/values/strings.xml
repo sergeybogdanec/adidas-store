@@ -23,4 +23,6 @@
     <string name="apply">Применить</string>
     <string name="createOrder">Оформить заказ</string>
     <string name="promocode">Промокод</string>
+    <string name="discount">Скидка: %d\%%</string>
+    <string name="count_placeholder">Количество: %d</string>
 </resources>

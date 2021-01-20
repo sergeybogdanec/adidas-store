@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:onClick="@{() -> viewModel.clearCart()}"
+            android:onClick="@{() -> viewModel.createOrder()}"
             android:text="@string/createOrder"
             app:layout_constraintBottom_toTopOf="@id/clearCart" />
 

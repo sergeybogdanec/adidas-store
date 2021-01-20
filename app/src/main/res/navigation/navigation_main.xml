@@ -11,5 +11,9 @@
         android:id="@+id/cartFragment"
         android:name="com.sergeybogdanec.adidasstore.ui.fragment.cart.CartFragment"
         android:label="CartFragment" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.sergeybogdanec.adidasstore.ui.fragment.orders.OrdersFragment"
+        android:label="OrdersFragment" />
 
 </navigation>
